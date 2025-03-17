@@ -4,5 +4,5 @@
 
 ## Key Features and Novelty
 - **DCGAT Module**: Enables **cross-modal message passing** between drugs and proteins, allowing embeddings to dynamically **incorporate information across both modalities** through intra- and cross-graph attention mechanisms.
-- **CNS Network (Cross Neighborhood Selection)**: A **GCN-based selection mechanism** that **dynamically selects cross-modal neighbors**, ensuring that each drug and protein node interacts with the most relevant counterparts.
+- **CNS Network (Cross Neighborhood Selection)**: A **GCN-based selection mechanism** that uses **Gumbel-Softmax Estimator** to  **dynamically selects cross-modal neighbors**, ensuring that each drug and protein node interacts with the most relevant counterparts.
 
