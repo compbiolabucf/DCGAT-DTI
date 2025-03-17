@@ -96,6 +96,13 @@ To integrate a new classification model:
 ### 📌 Notes
 - Ensure that all custom implementations are compatible with the existing pipeline.
 - Modify necessary configurations to properly register new data, featurizers, or classifiers.
+
+## Complete Pipeline
+![Complete Pipeline](dcgatmain.png)
+
+## DCGAT Module
+![DCGAT Module](dcgat_module.png)
+
 """
 
 
