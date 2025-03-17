@@ -1,0 +1,10 @@
+root_path: '/home/abrar/DTI/DTI-LM-main/datasets/yamanishi_08/'
+data_path: 'data_folds/warm_start_1_10/'   # drug_coldstart
+data_name: ['train_fold_1.csv', 'test_fold_1.csv']
+name: 'yamanishi'
+
+
+# warm_start_1_10 = unbalanced
+
+
+
