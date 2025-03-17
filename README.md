@@ -12,25 +12,25 @@ You can run  in **six different ways** based on dataset balancing and splitting 
 ### **Balanced Dataset**
 ```bash
 # Warm Start
-python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=True\" \"datamodule.splitting.splitting_strategy=random\"
+python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" \"datamodule.splitting.splitting_strategy=random"
 
 # Cold Start for Drug
-python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=True\" \"datamodule.splitting.splitting_strategy=cold_drug\"
+python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_drug"
 
 # Cold Start for Protein
-python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=True\" \"datamodule.splitting.splitting_strategy=cold_target\"
+python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_target"
 ```
 
 ### **Unbalanced Dataset**
 ```bash
 # Warm Start
-python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=False\" \"datamodule.splitting.splitting_strategy=random\"
+python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=random"
 
 # Cold Start for Drug
-python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=False\" \"datamodule.splitting.splitting_strategy=cold_drug\"
+python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_drug"
 
 # Cold Start for Protein
-python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=False\" \"datamodule.splitting.splitting_strategy=cold_target\"
+python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_target"
 ```
 ---
 
