@@ -6,17 +6,36 @@
 - **DCGAT Module**: Enables **cross-modal message passing** between drugs and proteins, allowing embeddings to dynamically **incorporate information across both modalities** through intra- and cross-graph attention mechanisms.
 - **CNS Network (Cross Neighborhood Selection)**: A **GCN-based selection mechanism** that uses **Gumbel-Softmax Estimator** to  **dynamically selects cross-modal neighbors**, ensuring that each drug and protein node interacts with the most relevant counterparts.
 
-## Running the Code
-To train the model, use the following command:
+## Running Different Configurations
+You can run  in **six different ways** based on dataset balancing and splitting strategy:
 
+### **Balanced Dataset**
 ```bash
-python run.py --config-name bindingDB_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=True\" \"datamodule.splitting.splitting_strategy=random\"
+# Warm Start
+python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=True\" \"datamodule.splitting.splitting_strategy=random\"
+
+# Cold Start for Drug
+python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=True\" \"datamodule.splitting.splitting_strategy=cold_drug\"
+
+# Cold Start for Protein
+python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=True\" \"datamodule.splitting.splitting_strategy=cold_target\"
 ```
 
+### **Unbalanced Dataset**
+```bash
+# Warm Start
+python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=False\" \"datamodule.splitting.splitting_strategy=random\"
+
+# Cold Start for Drug
+python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=False\" \"datamodule.splitting.splitting_strategy=cold_drug\"
+
+# Cold Start for Protein
+python run.py --config-name drugbank_train_GAT.yaml \"tuning.param_search.tune=False\" \"datamodule.splitting.balanced=False\" \"datamodule.splitting.splitting_strategy=cold_target\"
+```
 ---
 
-## Using Your Own Data
-Follow these steps to integrate your own dataset:
+## Different Dataset Usage
+Follow these steps to integrate your own custom dataset:
 
 1. **Modify the Preprocessing Pipeline**  
    - Update `utils.PREPROCESS` to add your dataset name.
@@ -45,7 +64,7 @@ Follow these steps to integrate your own dataset:
 
 ---
 
-## Using a Custom Featurizer
+## Integration of a Custom Featurizer
 If you want to modify the drug or protein featurization, follow these steps:
 
 1. **Add New Featurizers**  
