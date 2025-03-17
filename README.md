@@ -1,2 +1,8 @@
-# DCGAT-DTI
-**DCGAT-DTI** is a novel deep learning framework for Drug–Target Interaction (DTI) prediction, designed to enhance drug discovery by dynamically modeling interactions between chemical compounds and proteins. Unlike traditional methods that process drug and protein similarity graphs independently, DCGAT-DTI introduces a **Dynamic Cross-Graph Attention (DCGAT)** module to capture intra- and cross-graph dependencies. It initializes embeddings using pretrained language models (ESM-2 for proteins and ChemBERTa for drugs) and constructs similarity graphs that are processed through a GCN-based **Cross Neighborhood Selection (CNS) network**. This enables dynamic selection of cross-modal neighbors, allowing drug and protein embeddings to integrate information from both modalities via intra- and cross-graph attention mechanisms. A dual-objective training strategy combining binary cross-entropy and **supervised contrastive loss** further improves interaction discrimination. Evaluations on four benchmark datasets demonstrate state-of-the-art performance, particularly in cold start scenarios where unseen drugs or proteins are introduced.
+# DCGAT-DTI: Dynamic Cross-Graph Attention for Drug–Target Interaction Prediction
+
+**DCGAT-DTI** is a novel deep learning framework for **Drug–Target Interaction (DTI) prediction**, designed to enhance drug discovery by dynamically modeling interactions between chemical compounds and proteins. Unlike traditional methods that process drug and protein similarity graphs independently, **DCGAT-DTI** leverages a **Dynamic Cross-Graph Attention (DCGAT)** module to capture intra- and cross-graph dependencies.
+
+## Key Features and Novelty
+- **DCGAT Module**: Enables **cross-modal message passing** between drugs and proteins, allowing embeddings to dynamically **incorporate information across both modalities** through intra- and cross-graph attention mechanisms.
+- **CNS Network (Cross Neighborhood Selection)**: A **GCN-based selection mechanism** that **dynamically selects cross-modal neighbors**, ensuring that each drug and protein node interacts with the most relevant counterparts.
+
