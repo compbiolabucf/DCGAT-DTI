@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/37d03b6b-5279-4720-befc-67ac8f3c88f1)# DCGAT-DTI: Dynamic Cross-Graph Attention for Drug–Target Interaction Prediction
+# DCGAT-DTI: Dynamic Cross-Graph Attention for Drug–Target Interaction Prediction
 
 **DCGAT-DTI** is a novel deep learning framework for **Drug–Target Interaction (DTI) prediction**, designed to enhance drug discovery by dynamically modeling interactions between chemical compounds and proteins. Unlike traditional methods that process drug and protein similarity graphs independently, **DCGAT-DTI** leverages a **Dynamic Cross-Graph Attention (DCGAT)** module to capture intra- and cross-graph dependencies.
 
@@ -11,7 +11,11 @@ The datasets used in this project can be downloaded from the following link:
 
 👉 [Download Datasets](https://drive.google.com/file/d/1VzO6BQNEbbudYBeLoFG9fe5IrzMgflgn/view?usp=sharing)
 
-After downloading, place the extracted files in the appropriate directory as specified in the configuration.
+```
+mkdir Datasets
+```
+
+After downloading, place the extracted this in the **Datasets** directory. There are four datasets- BindingDB, DrugBank, Yamanishi_08 and Luo's.
 
 ---
 
