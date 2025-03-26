@@ -16,7 +16,7 @@ Create a directory named **Datasets** by running the command :
 mkdir Datasets
 ```
 
-After downloading, place the extracted this in the **Datasets** directory. There are four datasets- BindingDB, DrugBank, Yamanishi_08 and Luo's.
+After downloading, extract the zip file in the **Datasets** directory. There are four datasets- BindingDB, DrugBank, Yamanishi_08 and Luo's.
 
 ---
 
