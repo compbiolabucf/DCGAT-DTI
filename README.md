@@ -6,33 +6,106 @@
 - **DCGAT Module**: Enables **cross-modal message passing** between drugs and proteins, allowing embeddings to dynamically **incorporate information across both modalities** through intra- and cross-graph attention mechanisms.
 - **CNS Network (Cross Neighborhood Selection)**: A **GCN-based selection mechanism** that uses **Gumbel-Softmax Estimator** to  **dynamically selects cross-modal neighbors**, ensuring that each drug and protein node interacts with the most relevant counterparts.
 
-## Running Different Configurations
-You can run  in **six different ways** based on dataset balancing and splitting strategy:
+## 📂 Dataset
+The datasets used in this project can be downloaded from the following link:
 
-### **Balanced Dataset**
+👉 [Download Datasets](https://drive.google.com/file/d/1VzO6BQNEbbudYBeLoFG9fe5IrzMgflgn/view?usp=sharing)
+
+After downloading, place the extracted files in the appropriate directory as specified in the configuration.
+
+---
+
+## 🔧 Running Different Configurations
+You can run the model in **six different settings** per dataset based on whether the data is **balanced** or **unbalanced**, and the **splitting strategy**.
+
+---
+
+### 🚀 DrugBank Dataset
 ```bash
-# Warm Start
-python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" \"datamodule.splitting.splitting_strategy=random"
+# Balanced - Warm Start
+python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=random"
 
-# Cold Start for Drug
+# Balanced - Cold Start for Drug
 python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_drug"
 
-# Cold Start for Protein
+# Balanced - Cold Start for Protein
 python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_target"
-```
 
-### **Unbalanced Dataset**
-```bash
-# Warm Start
+# Unbalanced - Warm Start
 python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=random"
 
-# Cold Start for Drug
+# Unbalanced - Cold Start for Drug
 python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_drug"
 
-# Cold Start for Protein
+# Unbalanced - Cold Start for Protein
 python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_target"
 ```
+
+### 🔬 BindingDB Dataset
+```bash
+# Balanced - Warm Start
+python run.py --config-name bindingDB_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=random"
+
+# Balanced - Cold Start for Drug
+python run.py --config-name bindingDB_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_drug"
+
+# Balanced - Cold Start for Protein
+python run.py --config-name bindingDB_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_target"
+
+# Unbalanced - Warm Start
+python run.py --config-name bindingDB_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=random"
+
+# Unbalanced - Cold Start for Drug
+python run.py --config-name bindingDB_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_drug"
+
+# Unbalanced - Cold Start for Protein
+python run.py --config-name bindingDB_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_target"
+```
+
+### 🧬 Yamanishi_08 Dataset
+```bash
+# Balanced - Warm Start
+python run.py --config-name yamanishi_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=random"
+
+# Balanced - Cold Start for Drug
+python run.py --config-name yamanishi_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_drug"
+
+# Balanced - Cold Start for Protein
+python run.py --config-name yamanishi_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_target"
+
+# Unbalanced - Warm Start
+python run.py --config-name yamanishi_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=random"
+
+# Unbalanced - Cold Start for Drug
+python run.py --config-name yamanishi_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_drug"
+
+# Unbalanced - Cold Start for Protein
+python run.py --config-name yamanishi_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_target"
+```
+
+### 🧪 Luo's Dataset
+```bash
+# Balanced - Warm Start
+python run.py --config-name luo_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=random"
+
+# Balanced - Cold Start for Drug
+python run.py --config-name luo_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_drug"
+
+# Balanced - Cold Start for Protein
+python run.py --config-name luo_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=cold_target"
+
+# Unbalanced - Warm Start
+python run.py --config-name luo_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=random"
+
+# Unbalanced - Cold Start for Drug
+python run.py --config-name luo_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_drug"
+
+# Unbalanced - Cold Start for Protein
+python run.py --config-name luo_train.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_target"
+```
+
 ---
+
 
 ## Different Dataset Usage
 Follow these steps to integrate your own custom dataset:
