@@ -1,4 +1,4 @@
-# DCGAT-DTI: Dynamic Cross-Graph Attention for Drug–Target Interaction Prediction
+![image](https://github.com/user-attachments/assets/37d03b6b-5279-4720-befc-67ac8f3c88f1)# DCGAT-DTI: Dynamic Cross-Graph Attention for Drug–Target Interaction Prediction
 
 **DCGAT-DTI** is a novel deep learning framework for **Drug–Target Interaction (DTI) prediction**, designed to enhance drug discovery by dynamically modeling interactions between chemical compounds and proteins. Unlike traditional methods that process drug and protein similarity graphs independently, **DCGAT-DTI** leverages a **Dynamic Cross-Graph Attention (DCGAT)** module to capture intra- and cross-graph dependencies.
 
@@ -20,7 +20,7 @@ You can run the model in **six different settings** per dataset based on whether
 
 ---
 
-### 🚀 DrugBank Dataset
+### 🧬 DrugBank Dataset
 ```bash
 # Balanced - Warm Start
 python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=random"
@@ -41,7 +41,7 @@ python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=Fa
 python run.py --config-name drugbank_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=False" "datamodule.splitting.splitting_strategy=cold_target"
 ```
 
-### 🔬 BindingDB Dataset
+### 🧪 BindingDB Dataset
 ```bash
 # Balanced - Warm Start
 python run.py --config-name bindingDB_train_GAT.yaml "tuning.param_search.tune=False" "datamodule.splitting.balanced=True" "datamodule.splitting.splitting_strategy=random"
