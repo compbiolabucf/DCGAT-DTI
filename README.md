@@ -11,6 +11,7 @@ The datasets used in this project can be downloaded from the following link:
 
 👉 [Download Datasets](https://drive.google.com/file/d/1VzO6BQNEbbudYBeLoFG9fe5IrzMgflgn/view?usp=sharing)
 
+Create a directory named **Datasets** by running the command :
 ```
 mkdir Datasets
 ```
