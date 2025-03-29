@@ -6,6 +6,10 @@
 - **DCGAT Module**: Enables **cross-modal message passing** between drugs and proteins, allowing embeddings to dynamically **incorporate information across both modalities** through intra- and cross-graph attention mechanisms.
 - **CNS Network (Cross Neighborhood Selection)**: A **GCN-based selection mechanism** that uses **Gumbel-Softmax Estimator** to  **dynamically selects cross-modal neighbors**, ensuring that each drug and protein node interacts with the most relevant counterparts.
 
+## Complete Pipeline
+![Complete Pipeline](dcgatmain.png)
+
+
 ## DCGAT Module
 ![DCGAT Module](dcgat_module.png)
 
@@ -179,8 +183,6 @@ To integrate a new classification model:
 - Ensure that all custom implementations are compatible with the existing pipeline.
 - Modify necessary configurations to properly register new data, featurizers, or classifiers.
 
-## Complete Pipeline
-![Complete Pipeline](dcgatmain.png)
 
 
 
