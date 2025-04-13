@@ -7,7 +7,7 @@
 - **CNS Network (Cross Neighborhood Selection)**: A **GCN-based selection mechanism** that uses **Gumbel-Softmax Estimator** to  **dynamically selects cross-modal neighbors**, ensuring that each drug and protein node interacts with the most relevant counterparts.
 
 ## Complete Pipeline
-![Complete Pipeline](dcgatmain.png)
+![Complete Pipeline](DCGAT-DTI_(updated).eps)
 
 
 ## DCGAT Module
