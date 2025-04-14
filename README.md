@@ -10,10 +10,6 @@
 ![Complete Pipeline](DCGAT-DTI_(updated).svg)
 
 
-## DCGAT Module
-![DCGAT Module](dcgat_module.png)
-
-
 ## 📂 Dataset
 The datasets used in this project can be downloaded from the following link:
 
